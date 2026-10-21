@@ -4,8 +4,11 @@ import type { CampusEvent } from "../types";
 import { formatDate, seatsLeft } from "../format";
 
 // TODO 1: declare a prop `event` of type CampusEvent (defineProps)
+const props = defineProps<{ event: CampusEvent; }>();
 // TODO 2: declare an event `book` that sends the event id (defineEmits)
+const emit = defineProps<{ books: [CampusEvent["id"]] }>();
 // TODO 3: computed values
+
 //   left       -> seats left (use seatsLeft)
 //   isFull     -> no seat left
 //   almostFull -> 1 to 5 seats left
